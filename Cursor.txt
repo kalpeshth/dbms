@@ -1,0 +1,25 @@
+use db1;
+
+delimiter $$
+create procedure proce_emp()
+begin
+   declare v_name varchar(100);
+   declare v_id int;
+   declare v_finish integer default 0;
+   declare c1 cursor for select emp_id, emp_name from employee;
+   declare continue handler for NOT FOUND set v_finish=1;
+   open c1;
+   get_emp: LOOP
+      fetch c1 into v_id,v_name;
+      if v_finish=1 then
+         leave get_emp;
+      end if;
+      select concat(v_id,v_name);
+   END LOOP get_emp;
+   close c1;
+end $$
+
+
+call proce_emp();
+&&
+    

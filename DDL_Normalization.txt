@@ -1,0 +1,15 @@
+create database student_detail;
+use student_detail;
+create table stud_info (st_id int(3),stud_name varchar(20),stud_subject varchar(20));
+desc stud_info;
+alter table stud_info add Email_Id varchar(20);
+desc stud_info;
+insert into stud_info values(1,"Amaan","M3","as@gmail.com");
+insert into stud_info values(2,"Mohit","CG","mh@gmail.com");
+insert into stud_info values(3,"Raj","DBMS","rj@gmail.com");
+insert into stud_info values(4,"Riya","M3","ri@gmail.com");
+select* from stud_info;
+truncate table stud_info;
+desc stud_info;
+drop table stud_info;
+desc stud_info;

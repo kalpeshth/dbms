@@ -1,0 +1,11 @@
+create database student_detail;
+use student_detail;
+create table stud_info (st_id int(3),stud_name varchar(20),stud_subject varchar(20),stud_email varchar(20));
+desc stud_info;
+insert into stud_info values(1,"Amaan","M3","as@gmail.com");
+insert into stud_info values(2,"Mohit","CG","mh@gmail.com");
+insert into stud_info values(3,"Raj","DBMS","rj@gmail.com");
+insert into stud_info values(4,"Rehan","M3","ri@gmail.com");
+select* from stud_info where NOT st_id >3 ;
+select* from stud_info where stud_name LIKE "Am%" ;
+select* from stud_info where stud_name LIKE "%n" ;

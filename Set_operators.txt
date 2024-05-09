@@ -1,0 +1,14 @@
+create database worker_details;
+use worker_details;
+create table first (id int(2) ,name varchar(20));
+create table second (id int(2) ,name varchar(20));
+insert into first values(1,"Amaan");
+insert into first values(2,"Mohan");
+insert into first values(3,"Sam");
+insert into second values(3,"Sam");
+insert into second values(4,"david");
+insert into second values(5,"rock");
+select* from first UNION select* from second;  
+select* from first UNION ALL select* from second; 
+select* from first INTERSECT select* from second; 
+

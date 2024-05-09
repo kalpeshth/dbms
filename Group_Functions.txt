@@ -1,0 +1,13 @@
+create database student_db;
+use student_db;
+create table info (stud_id int(2),depart_id int(3),name varchar(20));
+desc info;
+insert into info values(1,111,"Amaan");
+insert into info values(2,222,"Mohit");
+insert into info values(3,333,"Krish");
+insert into info values(4,444,"Amit");
+select* from info;
+select AVG(stud_id) from info;
+select SUM(stud_id) from info;
+select MIN(stud_id) from info;
+select MAX(stud_id) from info;

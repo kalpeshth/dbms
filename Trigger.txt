@@ -1,0 +1,12 @@
+create database Company;
+use Company;
+create table Employee (emp_id int(20), emp_name varchar(10));
+show tables;
+desc Employee;
+insert into Employee values (112,"Amaan");
+insert into Employee values (100,"Sujeet");
+insert into Employee values (102,"Amit");
+Create Trigger sample_trigger before insert on Employee For Each Row set new.emp_id = new.emp_id+100;
+select *from Employee;
+insert into Employee values (120,"suda");
+select *from Employee;

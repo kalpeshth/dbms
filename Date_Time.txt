@@ -1,0 +1,8 @@
+create database Birth_info;
+use Birth_info;
+create table info (name varchar(20),DOB DATE,Last_login DATETIME);
+desc info;
+insert into info values("Amaan","2003-01-01",'2023-05-16 04:15:22');
+insert into info values("Mohit","2003-10-03",'2023-05-16 05:15:22');
+insert into info values("Sanjay","2004-10-03",'2023-10-16 06:15:22');
+select* from info;

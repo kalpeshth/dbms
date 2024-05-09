@@ -1,0 +1,25 @@
+create database Company;
+use Company;
+create table Developer(dev_id int(10), dev_name varchar(20), dev_domain varchar(20),primary key(dev_id));
+desc Developer;
+Alter table Developer add (Shift varchar(10));
+desc Developer;
+Alter table Developer modify dev_name varchar(30);
+desc Developer;
+insert into Developer values (1,"Amaan","C++","Morning");
+insert into Developer values (2,"Suman","Java","Evening");
+insert into Developer values (3,"Mahesh","C","Night");
+insert into Developer values (4,"Raj","Python","Night");
+create table Management(man_id int(10), man_name varchar(20), man_domain varchar(20),foreign key(man_id) references Developer(dev_id));
+desc Management;
+insert into Management values (1,"linda","php");
+insert into Management values (2,"George","dbms");
+insert into Management values (3,"Rock","C#");
+insert into Management values (4,"Joe","C++");
+select *from Developer;
+select *from Management;
+drop table Management;
+drop table Developer;
+
+
+

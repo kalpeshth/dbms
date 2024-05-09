@@ -1,0 +1,35 @@
+use dem2;
+
+delimiter $
+create procedure addp()
+begin
+   declare a,b,c int;
+   set a=2;
+   set b=3;
+   set c=a+b;
+   select concat('value',c);
+end;
+$
+
+delimiter ;
+call addp();
+
+
+
+use dem1;
+
+delimiter $
+create procedure subp()
+begin
+   declare a,b,c int;
+   set a=2;
+   set b=3;
+   set c=a-b;
+   select concat('value',c);
+end;
+$
+
+
+delimiter ;
+call subp();
+

@@ -1,0 +1,13 @@
+create database student_db;
+use student_db;
+create table info (stud_id int(2),depart_id int(3),name varchar(20));
+desc info;
+insert into info values(1,111,"Amaan");
+insert into info values(2,222,"Mohit");
+insert into info values(3,333,"Krishna");
+insert into info values(4,444,"Amit");
+select* from info;
+select* from info where (stud_id + depart_id )>100;
+select* from info where (stud_id - depart_id )<170;
+select* from info where (stud_id * depart_id )>200;
+select* from info where (stud_id / depart_id )<130;
